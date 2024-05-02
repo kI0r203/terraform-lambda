@@ -5,6 +5,7 @@ resource "aws_lambda_function" "test_lambda" {
   function_name = var.function_name
   role          = aws_iam_role.lambda_role.arn
   handler       = var.handler
+  timeout = 5
 
   runtime = "python3.12"
 

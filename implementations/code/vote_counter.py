@@ -7,7 +7,7 @@ s3 = boto3.client('s3')
 collector_bucket = os.environ["CollectorBucket"] 
 results_bucket = os.environ["ResultBucket"]
 
-def lambda_handler(event, context):
+def handler(event, context):
     print(json.dumps(event))
     print(collector_bucket)
     print(results_bucket)
